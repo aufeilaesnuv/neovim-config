@@ -5,3 +5,4 @@ Dependencies:
 * a nerd font
 * luarocks
 * python3-venv (for python LSP and ruff)
+* nodejs (IF you enable copilot)
