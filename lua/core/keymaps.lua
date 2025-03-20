@@ -11,7 +11,7 @@ vim.keymap.set("n", "<C-s>", "<cmd>noautocmd w <CR>", opts)
 vim.keymap.set("i", "<C-s>", "<Esc><cmd>noautocmd w<CR>", opts)
 
 -- save & auto-format
-vim.keymap.set("n", "<leader>sn", "<cmd> w <CR>", opts)
+-- vim.keymap.set("n", "<leader>sn", "<cmd> w <CR>", opts)
 
 -- quit file
 vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
@@ -20,8 +20,8 @@ vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
 vim.keymap.set("n", "x", '"_x', opts)
 
 -- keep cursor centered when scrolling
-vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
-vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
+-- vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
+-- vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
 
 -- keep cursor centered when searching
 vim.keymap.set("n", "n", "nzzzv", opts)
