@@ -1,47 +1,28 @@
 return {
-
 	{
-
 		"zbirenbaum/copilot.lua",
-
 		cmd = "Copilot",
-
 		event = "InsertEnter",
-
 		opts = {
-
 			panel = { enabled = false },
-
 			suggestion = {
-
 				auto_trigger = true,
-
 				-- Use alt to interact with copilot
-
 				keymap = {
-
 					accept = false,
-
 					accept_word = "<M-w>",
-
 					accept_line = "<M-l>",
-
 					next = "<M-]>",
-
 					prev = "<M-[",
-
 					dismiss = "/",
 				},
 			},
-
 			filetypes = { markdown = true },
 		},
 
 		config = function(_, opts)
 			local cmp = require("cmp")
-
 			local copilot = require("copilot.suggestion")
-
 			local luasnip = require("luasnip")
 
 			require("copilot").setup(opts)
@@ -58,7 +39,6 @@ return {
 				if copilot.is_visible() then
 					copilot.dismiss()
 				end
-
 				set_trigger(false)
 			end)
 
@@ -69,9 +49,7 @@ return {
 			end)
 
 			vim.api.nvim_create_autocmd("User", {
-
 				pattern = { "LuasnipInsertNodeEnter", "LuasnipInsertNodeLeave" },
-
 				callback = function()
 					set_trigger(not luasnip.expand_or_locally_jumpable())
 				end,
