@@ -128,7 +128,12 @@ return { -- Autocompletion
 				--    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
 				-- Select next/previous item with Tab / Shift + Tab
 				["<Tab>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
+					-- If the copilot plugin is enabled, then tab autocompletes using copilot
+					local ok, copilot = pcall(require, "copilot.suggestion")
+
+					if ok and copilot.is_visible() then
+						copilot.accept()
+					elseif cmp.visible() then
 						cmp.select_next_item()
 					elseif luasnip.expand_or_locally_jumpable() then
 						luasnip.expand_or_jump()

@@ -25,4 +25,6 @@ require("lazy").setup({
 	require("plugins.misc"),
 	require("plugins.comments"),
 	require("plugins.neoscroll"),
+	require("plugins.python_indent"),
+	-- require("plugins.copilot"),
 })
