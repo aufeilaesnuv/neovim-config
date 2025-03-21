@@ -13,6 +13,9 @@ vim.keymap.set("i", "<C-s>", "<Esc><cmd>noautocmd w<CR>", opts)
 -- save & auto-format
 -- vim.keymap.set("n", "<leader>sn", "<cmd> w <CR>", opts)
 
+-- undo
+vim.keymap.set("n", "<C-z>", "u", opts)
+
 -- quit file
 vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
 
