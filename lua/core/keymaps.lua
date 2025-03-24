@@ -76,3 +76,10 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous dia
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+
+-- copy relative file path in clipboard
+vim.keymap.set("n", "<leader>fp", function()
+	local path = vim.fn.expand("%")
+	vim.fn.setreg("+", path)
+	print("Copied path: " .. path)
+end, opts)
