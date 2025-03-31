@@ -15,6 +15,7 @@ vim.keymap.set("i", "<C-s>", "<Esc><cmd>noautocmd w<CR>", opts)
 
 -- undo
 vim.keymap.set("n", "<C-z>", "u", opts)
+vim.keymap.set("i", "<C-z>", "<Esc>u", opts)
 
 -- quit file
 vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
