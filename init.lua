@@ -25,6 +25,7 @@ require("lazy").setup({
 	require("plugins.neoscroll"),
 	require("plugins.neotree"),
 	require("plugins.python_indent"),
+	require("plugins.surround"),
 	require("plugins.telescope"),
 	require("plugins.todo_comments"),
 	require("plugins.treesitter"),
