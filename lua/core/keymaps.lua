@@ -8,8 +8,7 @@ local opts = { noremap = true, silent = true }
 
 -- save file
 vim.keymap.set("n", "<C-s>", "<cmd>noautocmd w <CR>", opts)
-vim.keymap.set("i", "<C-s>", "<Esc><cmd>noautocmd w<CR>", opts)
-vim.keymap.set("v", "<C-s>", "<Esc><cmd>noautocmd w<CR>", opts)
+vim.keymap.set({ "i", "v" }, "<C-s>", "<Esc><cmd>noautocmd w<CR>", opts)
 
 -- save & auto-format
 -- vim.keymap.set("n", "<leader>sn", "<cmd> w <CR>", opts)
