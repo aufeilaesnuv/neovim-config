@@ -18,6 +18,7 @@ require("lazy").setup({
 	require("plugins.colour_theme"),
 	require("plugins.comments"),
 	-- require("plugins.copilot"),
+	-- require("plugins.copilot_chat"),
 	require("plugins.gitsigns"),
 	require("plugins.lsp"),
 	require("plugins.lsp_signature"),
