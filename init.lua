@@ -24,6 +24,7 @@ require("lazy").setup({
 	require("plugins.lsp"),
 	require("plugins.lsp_signature"),
 	require("plugins.lualine"),
+	require("plugins.markdown"),
 	require("plugins.misc"),
 	-- require("plugins.neoscroll"),
 	require("plugins.neotree"),
