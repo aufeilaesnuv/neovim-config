@@ -11,10 +11,18 @@ return {
 		require("mini.ai").setup()
 		require("mini.surround").setup()
 
-		MiniFiles = require("mini.files")
+		local notify = require("mini.notify")
+		notify.setup()
+		vim.notify = notify.make_notify({
+			ERROR = { duration = 5000 },
+			WARN = { duration = 4000 },
+			INFO = { duration = 3000 },
+		})
+
+		local files = require("mini.files")
 		vim.keymap.set("n", "<leader>e", function()
-			if not MiniFiles.close() then
-				MiniFiles.open(vim.api.nvim_buf_get_name(0))
+			if not files.close() then
+				files.open(vim.api.nvim_buf_get_name(0))
 			end
 		end, { desc = "Toggle MiniFiles" })
 	end,

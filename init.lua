@@ -27,8 +27,6 @@ require("lazy").setup({
 	require("plugins.markdown"),
 	require("plugins.mini"),
 	require("plugins.misc"),
-	-- require("plugins.neoscroll"),
-	-- require("plugins.noice"),
 	require("plugins.python_indent"),
 	require("plugins.rust"),
 	require("plugins.telescope"),
