@@ -31,7 +31,6 @@ require("lazy").setup({
 	-- require("plugins.noice"),
 	require("plugins.python_indent"),
 	require("plugins.rust"),
-	require("plugins.surround"),
 	require("plugins.telescope"),
 	require("plugins.todo_comments"),
 	require("plugins.treesitter"),
