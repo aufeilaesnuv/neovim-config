@@ -56,10 +56,6 @@ vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", opts)
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", opts)
 vim.keymap.set("n", "<leader>o", "<C-w>o", { desc = "Close all other splits" })
 
--- Navigate quickfix list
-vim.keymap.set("n", "<C-j>", ":cnext<CR>", opts)
-vim.keymap.set("n", "<C-k>", ":cprev<CR>", opts)
-
 -- Tabs
 vim.keymap.set("n", "<leader>to", ":tabnew<CR>", opts) -- open new tab
 vim.keymap.set("n", "<leader>tx", ":tabclose<CR>", opts) -- close current tab
