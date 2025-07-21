@@ -87,5 +87,5 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 vim.keymap.set("n", "<leader>fp", function()
 	local path = vim.fn.expand("%")
 	vim.fn.setreg("+", path)
-	print("Copied path: " .. path)
+	vim.notify("Copied path: " .. path)
 end, opts)
