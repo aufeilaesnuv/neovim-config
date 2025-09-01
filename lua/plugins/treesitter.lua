@@ -33,6 +33,7 @@ return { -- Highlight, edit, and navigate code
 			"html",
 			"latex",
 			"rust",
+			"c",
 		}, -- Autoinstall languages that are not installed
 		auto_install = true,
 		highlight = {
