@@ -31,7 +31,7 @@ return { -- Highlight, edit, and navigate code
 			"tsx",
 			"css",
 			"html",
-			"latex",
+			-- "latex",
 			"rust",
 			"c",
 		}, -- Autoinstall languages that are not installed
