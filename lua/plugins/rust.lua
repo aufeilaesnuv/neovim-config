@@ -5,5 +5,6 @@ return {
 
 	config = function()
 		vim.keymap.set("n", "<leader>cr", ":term<CR>icargo run<CR>")
+		vim.keymap.set("n", "<leader>ct", ":term<CR>icargo test<CR>")
 	end,
 }
