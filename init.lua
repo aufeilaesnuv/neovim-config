@@ -27,7 +27,7 @@ require("lazy").setup({
 	require("plugins.markdown"),
 	require("plugins.mini"),
 	require("plugins.misc"),
-	require("plugins.python_indent"),
+	require("plugins.python"),
 	require("plugins.rust"),
 	require("plugins.telescope"),
 	require("plugins.todo_comments"),
