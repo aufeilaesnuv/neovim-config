@@ -424,6 +424,11 @@ require("mini.bufremove").setup({})
 require("mini.icons").setup({})
 
 local mini_files = require("mini.files")
+mini_files.setup({
+	mappings = {
+		synchronize = "<CR>",
+	},
+})
 vim.keymap.set("n", "<leader>e", function()
 	if not mini_files.close() then
 		mini_files.open(vim.api.nvim_buf_get_name(0))
