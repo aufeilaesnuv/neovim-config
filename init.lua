@@ -108,9 +108,6 @@ local keymap_opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<C-s>", "<cmd>w<CR>", keymap_opts)
 vim.keymap.set({ "i", "v" }, "<C-s>", "<Esc><cmd>w<CR>", keymap_opts)
 
--- save & auto-format
--- vim.keymap.set("n", "<leader>sn", "<cmd> w <CR>", opts)
-
 -- undo
 vim.keymap.set("n", "<C-z>", "u", keymap_opts)
 vim.keymap.set("i", "<C-z>", "<Esc>u", keymap_opts)
@@ -140,7 +137,6 @@ vim.keymap.set("n", "<Tab>", ":bnext<CR>", keymap_opts)
 vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", keymap_opts)
 vim.keymap.set("n", "<leader>x", ":bp | bd #<CR>", { desc = "Close buffer but keep split" })
 vim.keymap.set("n", "<leader>b", "<cmd> enew <CR>", keymap_opts) -- new buffer
--- vim.keymap.set("n", "<leader>tm", ":term<CR>i", keymap_opts) -- open terminal
 vim.keymap.set("n", "<leader>X", ":%bd|e#<CR>", { desc = "Close all buffers except current" })
 
 -- Window management
@@ -461,7 +457,7 @@ end, { desc = "Git blame/show" })
 -- Statusline
 require("lualine").setup({
 	options = {
-		theme = "auto", -- melange-nvim ships a dedicated lualine theme
+		theme = "auto",
 		icons_enabled = true,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
