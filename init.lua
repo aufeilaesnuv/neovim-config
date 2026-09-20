@@ -387,7 +387,9 @@ vim.keymap.set("n", "<leader>ff", function()
 	require("fzf-lua").files()
 end, { desc = "FZF Files" })
 vim.keymap.set("n", "<leader>fg", function()
-	require("fzf-lua").live_grep()
+	require("fzf-lua").live_grep_native({
+		rg_opts = "--fixed-strings",
+	})
 end, { desc = "FZF Live Grep" })
 vim.keymap.set("n", "<leader>fb", function()
 	require("fzf-lua").buffers()
@@ -650,6 +652,7 @@ vim.lsp.config("ts_ls", {})
 vim.lsp.config("gopls", {})
 vim.lsp.config("clangd", {})
 vim.lsp.config("omnisharp", {})
+vim.lsp.config("terraform_ls", {})
 
 vim.g.rustaceanvim = {
 	server = {
@@ -731,6 +734,7 @@ vim.lsp.enable({
 	"gopls",
 	"clangd",
 	"omnisharp",
+	"terraform_ls",
 	"efm",
 })
 
