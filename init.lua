@@ -316,6 +316,7 @@ vim.pack.add({
 		src = "https://github.com/saghen/blink.cmp",
 		version = vim.version.range("1.*"),
 	},
+    "https://github.com/MeanderingProgrammer/render-markdown.nvim",
 })
 
 -- Treesitter
@@ -341,6 +342,7 @@ local setup_treesitter = function()
 		"vue",
 		"svelte",
 		"bash",
+        "latex",
 	}
 
 	local config = require("nvim-treesitter.config")
