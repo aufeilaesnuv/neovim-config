@@ -387,7 +387,7 @@ vim.keymap.set("n", "<leader>ff", function()
 end, { desc = "FZF Files" })
 vim.keymap.set("n", "<leader>fg", function()
 	require("fzf-lua").live_grep_native({
-		rg_opts = "--fixed-strings",
+		rg_opts = "--fixed-strings --smart-case",
 	})
 end, { desc = "FZF Live Grep" })
 vim.keymap.set("n", "<leader>fb", function()
